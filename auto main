@@ -47,7 +47,7 @@ end
 end
 end
 
-local function placebulma() 
+local function place2() 
   if game:GetService("Workspace")["_wave_num"].Value < getgenv().wavetolose then
         local args = {
     [1] = getgenv().id,
@@ -58,7 +58,7 @@ game:GetService("ReplicatedStorage").endpoints.client_to_server.spawn_unit:Invok
 end
 end
 
-local function place4() 
+local function place3() 
   if game:GetService("Workspace")["_wave_num"].Value < getgenv().wavetolose then
         local args = {
     [1] = getgenv().id,
@@ -181,12 +181,14 @@ _G.a = true
 while _G.a do
     task.wait()
 task.wait()
-placebulma()
+place()
+place2()
+place3()
 upgrade()
 start()
 sell()
 teleport()
 end
 end
-wait(1)
+wait()
 game:GetService("ReplicatedStorage").endpoints.client_to_server.vote_start:InvokeServer()
