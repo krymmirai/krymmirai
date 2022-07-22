@@ -188,5 +188,5 @@ sell()
 teleport()
 end
 end
-wait()
+wait(1)
 game:GetService("ReplicatedStorage").endpoints.client_to_server.vote_start:InvokeServer()
